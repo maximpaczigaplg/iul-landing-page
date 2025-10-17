@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tax‑Free Retirement Plan — No Risk Involved (Florida)</title>
-  <meta name="description" content="Florida residents: Turn your life insurance into a tax‑free retirement plan with lifetime protection and no market risk. A+ rated carriers. Request a free, no‑obligation quote." />
-  <meta property="og:title" content="Turn Your Life Insurance Into a Tax‑Free Retirement Plan — No Risk Involved" />
-  <meta property="og:description" content="Florida residents are discovering a smarter way to grow wealth tax‑free, protect their family for life, and create a legacy — all in one powerful solution." />
+  <title>Tax-Free Retirement Plan — No Risk Involved (Florida)</title>
+  <meta name="description" content="Florida residents: Turn your life insurance into a tax-free retirement plan with lifetime protection and no market risk. A+ rated carriers. Request a free, no-obligation quote." />
+  <meta property="og:title" content="Turn Your Life Insurance Into a Tax-Free Retirement Plan — No Risk Involved" />
+  <meta property="og:description" content="Florida residents are discovering a smarter way to grow wealth tax-free, protect their family for life, and create a legacy — all in one powerful solution." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0B5FFF" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,10 +42,15 @@
 
     form{display:grid;gap:10px}
     label{font-size:13px;color:#dbe8ff}
-    input,select,button{font:inherit}
-    .input{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.16);background:#0b1020;color:#fff;outline:none;transition:.15s}
-    .input:focus{border-color:var(--brand);box-shadow:0 0 0 6px var(--ring)}
+    input,select,button,textarea{font:inherit}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .input,.textarea,select{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.16);background:#0b1020;color:#fff;outline:none;transition:.15s}
+    .textarea{min-height:90px;resize:vertical}
+    .input:focus, .textarea:focus, select:focus{border-color:var(--brand);box-shadow:0 0 0 6px var(--ring)}
     .helper{font-size:12px;color:#b7c6e6}
+
+    .radio{display:flex;gap:14px;align-items:center}
+    .radio label{display:flex;gap:8px;align-items:center;color:#cfe2ff}
 
     .cta{padding:12.5px 16px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#2a7cff 65%,var(--brand-2));color:#fff;border:0;font-weight:800;letter-spacing:.3px;cursor:pointer;transition:transform .08s ease, filter .2s}
     .cta:hover{filter:brightness(1.05)}
@@ -67,6 +72,7 @@
       .hero h1{font-size:30px}
       .benefits{grid-template-columns:1fr}
       .card{padding:16px}
+      .row{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -78,15 +84,15 @@
   <main class="container">
     <section class="hero">
       <div>
-        <h1>Turn Your Life Insurance Into a Tax‑Free Retirement Plan — No Risk Involved</h1>
-        <p class="lead">Florida residents are discovering a smarter way to grow wealth tax‑free, protect their family for life, and create a legacy — all in one powerful solution.</p>
+        <h1>Turn Your Life Insurance Into a Tax-Free Retirement Plan — No Risk Involved</h1>
+        <p class="lead">Florida residents are discovering a smarter way to grow wealth tax-free, protect their family for life, and create a legacy — all in one powerful solution.</p>
 
         <div class="section">
           <h2>Why Thousands of Families Are Making the Switch:</h2>
           <div class="benefits">
             <div class="benefit">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 7L9 18l-5-5" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div><strong>Tax‑Free Growth</strong><br><span class="helper">Build wealth that grows without the burden of future taxes.</span></div>
+              <div><strong>Tax-Free Growth</strong><br><span class="helper">Build wealth that grows without the burden of future taxes.</span></div>
             </div>
             <div class="benefit">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 7L9 18l-5-5" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -98,7 +104,7 @@
             </div>
             <div class="benefit">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 7L9 18l-5-5" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div><strong>Legacy Planning</strong><br><span class="helper">Pass on wealth tax‑efficiently to your loved ones.</span></div>
+              <div><strong>Legacy Planning</strong><br><span class="helper">Pass on wealth tax-efficiently to your loved ones.</span></div>
             </div>
             <div class="benefit">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 7L9 18l-5-5" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -118,40 +124,113 @@
 
       <div class="card" id="quote-card">
         <div class="badge mobile-only">Florida Residents Only</div>
-        <h2 style="margin:6px 0 10px">Request Your Free, No‑Obligation Quote</h2>
+        <h2 style="margin:6px 0 10px">Request Your Free, No-Obligation Quote</h2>
         <p class="helper" style="margin:0 0 12px">This is a 100% free quote and does not affect your eligibility or cost. A licensed advisor will contact you with your personalized options.</p>
 
         <!-- ✅ Connected to Formspree -->
         <form id="lead-form" action="https://formspree.io/f/xzzjoewj" method="POST">
           <input type="hidden" name="_subject" value="🔥 New IUL Lead (Florida)">
-          <div>
-            <label for="full_name">Full Name</label>
-            <input class="input" id="full_name" name="full_name" type="text" placeholder="Jane Doe" required />
+
+          <div class="row">
+            <div>
+              <label for="full_name">Full Name</label>
+              <input class="input" id="full_name" name="full_name" type="text" placeholder="Jane Doe" required />
+            </div>
+            <div>
+              <label for="dob">Date of Birth</label>
+              <input class="input" id="dob" name="date_of_birth" type="date" required />
+            </div>
           </div>
-          <div>
-            <label for="phone">Phone Number</label>
-            <input class="input" id="phone" name="phone" type="tel" placeholder="(555) 555‑1234" required />
+
+          <div class="row">
+            <div>
+              <label for="phone">Phone Number</label>
+              <input class="input" id="phone" name="phone" type="tel" placeholder="(555) 555-1234" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
           </div>
+
           <div>
-            <label for="email">Email</label>
-            <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required />
+            <label>Address</label>
+            <div class="row">
+              <input class="input" name="address_street" type="text" placeholder="Street address" required />
+              <input class="input" name="address_city" type="text" placeholder="City" required />
+            </div>
+            <div class="row">
+              <input class="input" name="address_state" type="text" placeholder="State" required />
+              <input class="input" name="address_zip" type="text" placeholder="ZIP code" required />
+            </div>
           </div>
+
           <div>
-            <label for="age">Age</label>
-            <input class="input" id="age" name="age" type="number" min="18" max="80" placeholder="35" required />
+            <label>Smoker?</label>
+            <div class="radio">
+              <label><input type="radio" name="smoker" value="Non-Smoker" required /> Non-Smoker</label>
+              <label><input type="radio" name="smoker" value="Smoker" /> Smoker</label>
+            </div>
           </div>
+
+          <div class="row">
+            <div>
+              <label for="beneficiary_name">Name of Beneficiary</label>
+              <input class="input" id="beneficiary_name" name="beneficiary_name" type="text" placeholder="Full name" />
+            </div>
+            <div>
+              <label for="beneficiary_relationship">Relationship to Beneficiary</label>
+              <input class="input" id="beneficiary_relationship" name="beneficiary_relationship" type="text" placeholder="Spouse, child, etc." />
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="coverage_amount">Desired Coverage Amount</label>
+              <select class="input" id="coverage_amount" name="coverage_amount" required>
+                <option value="" selected disabled>Select amount</option>
+                <option>$50,000</option>
+                <option>$100,000</option>
+                <option>$250,000</option>
+                <option>$500,000</option>
+                <option>$1,000,000+</option>
+              </select>
+            </div>
+            <div>
+              <label for="income">Income Range <span class="helper">(helps us design the best plan)</span></label>
+              <select class="input" id="income" name="income" required>
+                <option value="" selected disabled>Select your range</option>
+                <option>Under $50,000</option>
+                <option>$50,000 – $75,000</option>
+                <option>$75,000 – $100,000</option>
+                <option>$100,000 – $150,000</option>
+                <option>$150,000 – $250,000</option>
+                <option>$250,000+</option>
+              </select>
+            </div>
+          </div>
+
           <div>
-            <label for="income">Income Range <span class="helper">(helps us design the best plan; doesn’t affect eligibility)</span></label>
-            <select class="input" id="income" name="income" required>
-              <option value="" selected disabled>Select your range</option>
-              <option>Under $50,000</option>
-              <option>$50,000 – $75,000</option>
-              <option>$75,000 – $100,000</option>
-              <option>$100,000 – $150,000</option>
-              <option>$150,000 – $250,000</option>
-              <option>$250,000+</option>
+            <label for="reason">Reason for Coverage</label>
+            <select class="input" id="reason" name="reason_for_coverage" required>
+              <option value="" selected disabled>Select a reason</option>
+              <option>Final Expenses</option>
+              <option>Family Protection / Income Replacement</option>
+              <option>Mortgage Protection</option>
+              <option>Retirement / Tax-Free Income (IUL)</option>
+              <option>Build Cash Value / College</option>
+              <option>Other</option>
             </select>
+            <div id="reason_other_wrap" style="display:none;margin-top:8px">
+              <input class="input" id="reason_other" name="reason_other_details" type="text" placeholder="Tell us more…" />
+            </div>
           </div>
+
+          <div>
+            <label for="notes">Anything else we should know? <span class="helper">(optional)</span></label>
+            <textarea class="textarea" id="notes" name="notes" placeholder="Best time to call, health notes, goals, etc."></textarea>
+          </div>
+
           <button class="cta" type="submit">Get My Free Quote</button>
           <div class="footnote">No obligation • Secure & confidential • Takes under 2 minutes</div>
           <div class="disclaimer">By submitting, you agree to be contacted by a licensed advisor about plan options at the phone number and email provided. This site is not affiliated with any government entity. Coverage availability may vary. Florida residents only.</div>
@@ -165,7 +244,26 @@
   </footer>
 
   <script>
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // DOB max (prevent future dates)
+    const dob = document.getElementById('dob');
+    if (dob){
+      const today = new Date().toISOString().split('T')[0];
+      dob.setAttribute('max', today);
+    }
+
+    // Show follow-up when "Other" is selected
+    const reason = document.getElementById('reason');
+    const otherWrap = document.getElementById('reason_other_wrap');
+    const otherInput = document.getElementById('reason_other');
+    reason.addEventListener('change', () => {
+      const show = reason.value === 'Other';
+      otherWrap.style.display = show ? 'block' : 'none';
+      otherInput.required = show;
+      if (!show) otherInput.value = '';
+    });
   </script>
 </body>
 </html>
