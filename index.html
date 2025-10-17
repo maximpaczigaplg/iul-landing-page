@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tax‑Free Retirement Plan — Free Quote (Florida)</title>
-  <meta name="description" content="Florida residents: Turn your life insurance into a tax‑free retirement plan with lifetime protection. A+ rated carriers. Request a free, no‑obligation quote." />
-  <meta property="og:title" content="Turn Your Life Insurance Into a Tax‑Free Retirement Plan — Without Risking a Penny" />
+  <title>Tax‑Free Retirement Plan — No Risk Involved (Florida)</title>
+  <meta name="description" content="Florida residents: Turn your life insurance into a tax‑free retirement plan with lifetime protection and no market risk. A+ rated carriers. Request a free, no‑obligation quote." />
+  <meta property="og:title" content="Turn Your Life Insurance Into a Tax‑Free Retirement Plan — No Risk Involved" />
   <meta property="og:description" content="Florida residents are discovering a smarter way to grow wealth tax‑free, protect their family for life, and create a legacy — all in one powerful solution." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0B5FFF" />
@@ -14,12 +14,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0a0c10;        /* charcoal */
-      --card:#0f1420;      /* deep navy */
-      --muted:#99a3b3;     /* slate */
-      --brand:#0b5fff;     /* electric blue */
-      --brand-2:#68e1fd;   /* aqua accent */
-      --ok:#10b981;        /* green */
+      --bg:#0a0c10;
+      --card:#0f1420;
+      --muted:#99a3b3;
+      --brand:#0b5fff;
+      --brand-2:#68e1fd;
+      --ok:#10b981;
       --ring: rgba(11,95,255,0.25);
     }
     *{box-sizing:border-box}
@@ -77,9 +77,8 @@
 
   <main class="container">
     <section class="hero">
-      <!-- LEFT: Copy -->
       <div>
-        <h1>Turn Your Life Insurance Into a Tax‑Free Retirement Plan — Without Risking a Penny</h1>
+        <h1>Turn Your Life Insurance Into a Tax‑Free Retirement Plan — No Risk Involved</h1>
         <p class="lead">Florida residents are discovering a smarter way to grow wealth tax‑free, protect their family for life, and create a legacy — all in one powerful solution.</p>
 
         <div class="section">
@@ -117,29 +116,29 @@
         </div>
       </div>
 
-      <!-- RIGHT: Form (above the fold on mobile) -->
       <div class="card" id="quote-card">
         <div class="badge mobile-only">Florida Residents Only</div>
         <h2 style="margin:6px 0 10px">Request Your Free, No‑Obligation Quote</h2>
         <p class="helper" style="margin:0 0 12px">This is a 100% free quote and does not affect your eligibility or cost. A licensed advisor will contact you with your personalized options.</p>
 
-        <!-- TODO: Connect action to your form handler (Getform, Zapier, GoHighLevel, etc.) -->
-        <form id="lead-form" action="#" method="post" novalidate>
+        <!-- ✅ Connected to Formspree -->
+        <form id="lead-form" action="https://formspree.io/f/xzzjoewj" method="POST">
+          <input type="hidden" name="_subject" value="🔥 New IUL Lead (Florida)">
           <div>
             <label for="full_name">Full Name</label>
             <input class="input" id="full_name" name="full_name" type="text" placeholder="Jane Doe" required />
           </div>
           <div>
             <label for="phone">Phone Number</label>
-            <input class="input" id="phone" name="phone" type="tel" placeholder="(555) 555‑1234" inputmode="tel" autocomplete="tel" required />
+            <input class="input" id="phone" name="phone" type="tel" placeholder="(555) 555‑1234" required />
           </div>
           <div>
             <label for="email">Email</label>
-            <input class="input" id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+            <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required />
           </div>
           <div>
             <label for="age">Age</label>
-            <input class="input" id="age" name="age" type="number" min="18" max="80" step="1" placeholder="35" required />
+            <input class="input" id="age" name="age" type="number" min="18" max="80" placeholder="35" required />
           </div>
           <div>
             <label for="income">Income Range <span class="helper">(helps us design the best plan; doesn’t affect eligibility)</span></label>
@@ -159,60 +158,14 @@
         </form>
       </div>
     </section>
-
-    <!-- SOCIAL PROOF / FAQ (optional, can be removed to keep ultra‑short) -->
-    <section class="section" aria-label="additional-info">
-      <div class="card">
-        <h2 style="margin-top:0">Questions People Ask</h2>
-        <div class="list">
-          <details>
-            <summary><strong>Is there any market risk?</strong></summary>
-            <p class="helper">No. Your plan is designed to capture growth without exposing your money to market losses.</p>
-          </details>
-          <details>
-            <summary><strong>Do I need a medical exam?</strong></summary>
-            <p class="helper">In most cases, no exam is required and approvals can be completed in days.</p>
-          </details>
-          <details>
-            <summary><strong>Why do you need my income range?</strong></summary>
-            <p class="helper">It helps us tailor options. It does not affect eligibility or your quoted cost.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <footer class="container" style="padding:28px 0 40px">
-      <div class="helper">© <span id="year"></span> Oasis International LLC. All rights reserved. Licensed in Florida.</div>
-    </footer>
   </main>
 
-  <script>
-    // Current year
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <footer class="container" style="padding:28px 0 40px">
+    <div class="helper">© <span id="year"></span> Oasis International LLC. All rights reserved. Licensed in Florida.</div>
+  </footer>
 
-    // Lightweight client-side validation and success state (replace with your backend)
-    document.getElementById('lead-form').addEventListener('submit', function(e){
-      e.preventDefault();
-      const form = e.currentTarget;
-      const valid = form.checkValidity();
-      if(!valid){
-        form.reportValidity();
-        return;
-      }
-      // Simulated success transition; replace with fetch() to your endpoint
-      const card = document.getElementById('quote-card');
-      card.innerHTML = `
-        <div class="badge">Request Received</div>
-        <h2 style="margin:8px 0 8px">Thanks! Your Free Quote Is On The Way</h2>
-        <p class="helper">A licensed advisor will text/call you shortly to verify a couple of details and share your personalized options.</p>
-        <div class="section">
-          <div class="benefit" style="margin-top:6px">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 7L9 18l-5-5" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div><strong>What happens next?</strong><br><span class="helper">We’ll confirm your details and walk you through options that fit your goals and budget.</span></div>
-          </div>
-        </div>
-      `;
-    });
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
